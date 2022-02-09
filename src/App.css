@@ -14,7 +14,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Red Hat Text', Roboto, sans-serif;
+  font-family:  'Red Hat Text', Montserrat, Roboto, sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: var(--white)

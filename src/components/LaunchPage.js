@@ -4,7 +4,20 @@ import {FaFacebook, FaInstagram, FaPinterest} from "react-icons/fa"
 
 const LaunchPage = () => {
     // States
-    const [days, setDays] = useState()
+    let [days, setDays] = useState('08')
+    const [hours, setHours] = useState('23')
+    const [minutes, setMinutes] = useState('55')
+    const [seconds, setSeconds] = useState('41')
+
+    // let dayInterv = setInterval(() =>{
+    //     let Day = parseInt(days)
+    //     let newDay = Day - 1
+    //     setDays(newDay)
+    //     if(days = 0){
+    //         clearInterval(dayInterv)
+    //     }
+    // }, 200)
+
 
 
   return (
@@ -16,7 +29,7 @@ const LaunchPage = () => {
             <div className="clock">
                 <div className="countdown-box">
                     <div className="box-item">
-                        <p>08</p>
+                        <p>{days}</p>
                     </div>
                     <p>Days</p>
                 </div>

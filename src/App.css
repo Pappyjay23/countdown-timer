@@ -1,8 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;600&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&family=Sacramento&display=swap');
+
+:root{
+  --grayish-blue: hsl(237, 18%, 59%);
+  --soft-red: hsl(345, 95%, 68%);
+  --white: hsl(0, 0%, 100%);
+  --dark-blue: #34364f;
+  --very-dark-blue: #1f1f30;
+  --black-blue: hsl(234, 17%, 12%);
+  --purple: #211A29;
+}
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Red Hat Text', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white)
 }

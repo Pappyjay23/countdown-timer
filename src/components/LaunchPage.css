@@ -1,0 +1,98 @@
+.launch-page {
+    background: linear-gradient(90deg, var(--purple), var(--purple));
+    height: 100vh;
+    position: relative;
+    padding: 4rem 0;
+    z-index: 0;
+}
+
+.launch-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    z-index: 999999;   
+    height: 100%;
+}
+
+.stars-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.hills-bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.launch-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+
+.clock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.countdown-box{
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-box > p{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 90%;
+    color: var(--grayish-blue);
+}
+
+.box-item {
+    background: linear-gradient(to bottom, var(--very-dark-blue), var(--dark-blue));
+    /* background-color: red; */
+    padding: 1.5rem 2rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+}
+
+
+.box-item p {
+    font-size: 4rem;
+    color: var(--soft-red);
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 0;
+    z-index: 99999999;
+}
+
+.socials {
+    font-size: 2rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    fill: var(--grayish-blue);
+    transition: all 0.4s ease;
+}
+
+.socials:hover {
+    fill: var(--soft-red);
+    font-size: 4rem;
+}

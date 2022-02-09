@@ -4,9 +4,9 @@ import LaunchPage from "./components/LaunchPage";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <LaunchPage />
-    </div>
+    </>
   );
 }
 

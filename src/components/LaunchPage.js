@@ -63,7 +63,9 @@ const LaunchPage = () => {
    
     useEffect(() => { 
         secondInterv();
-        minuteInterv();   
+        minuteInterv();  
+        hourInterv();
+        dayInterv();
       }, []);
 
 
@@ -83,7 +85,7 @@ const LaunchPage = () => {
                 </div>
                 <div className="countdown-box">
                     <div className="box-item">
-                        <p>23</p>
+                        <p>{hours}</p>
                     </div>
                     <p>Hours</p>
                 </div>

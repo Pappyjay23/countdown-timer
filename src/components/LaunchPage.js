@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./LaunchPage.css"
 import {FaFacebook, FaInstagram, FaPinterest} from "react-icons/fa"
 
@@ -6,17 +6,65 @@ const LaunchPage = () => {
     // States
     let [days, setDays] = useState('08')
     const [hours, setHours] = useState('23')
-    const [minutes, setMinutes] = useState('55')
-    const [seconds, setSeconds] = useState('41')
+    const [minutes, setMinutes] = useState('59')
+    const [seconds, setSeconds] = useState('59')
 
-    // let dayInterv = setInterval(() =>{
-    //     let Day = parseInt(days)
-    //     let newDay = Day - 1
-    //     setDays(newDay)
-    //     if(days = 0){
-    //         clearInterval(dayInterv)
-    //     }
-    // }, 200)
+    const dayInterv = () =>{
+        let start = 8;
+        const end = 0
+
+        if (start === end) return; 
+
+        let timer = setInterval(() => {
+          start -= 1;
+          setDays(start)
+          if (start === end) clearInterval(timer)       
+        }, 86400000);
+    }
+
+    const hourInterv = () =>{
+        let start = 23;
+        const end = 0
+
+        if (start === end) return; 
+
+        let timer = setInterval(() => {
+          start -= 1;
+          setHours(start)
+          if (start === end) setInterval(hourInterv())       
+        }, 3600000);
+    }
+    
+    const minuteInterv = () =>{
+        let start = 59;
+        const end = 0
+
+        if (start === end) return; 
+
+        let timer = setInterval(() => {
+          start -= 1;
+          setMinutes(start)
+          if (start === end) setInterval(minuteInterv())       
+        }, 60000);
+    }
+
+    const secondInterv = () =>{
+        let start = 59;
+        const end = 0
+
+        if (start === end) return; 
+
+        let timer = setInterval(() => {
+          start -= 1;
+          setSeconds(start)
+          if (start === end) setInterval(secondInterv())       
+        }, 1000);
+    }
+   
+    useEffect(() => { 
+        secondInterv();
+        minuteInterv();   
+      }, []);
 
 
 
@@ -41,13 +89,13 @@ const LaunchPage = () => {
                 </div>
                 <div className="countdown-box">
                     <div className="box-item">
-                        <p>55</p>
+                        <p>{minutes}</p>
                     </div>
                     <p>Minutes</p>
                 </div>
                 <div className="countdown-box">
                     <div className="box-item">
-                        <p>41</p>
+                        <p>{seconds}</p>
                     </div>
                     <p>Seconds</p>
                 </div>

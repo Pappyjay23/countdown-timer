@@ -1,8 +1,8 @@
 .launch-page {
-    background: linear-gradient(90deg, var(--purple), var(--purple));
+     background: linear-gradient(90deg, var(--purple), var(--purple));
     height: 100vh;
     position: relative;
-    padding: 4rem 0;
+    padding-top: 4rem;
     z-index: 0;
 }
 
@@ -16,15 +16,15 @@
 }
 
 .stars-bg{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    height: 100%;
     z-index: -1;
 }
 
 .hills-bg{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -62,7 +62,6 @@
 
 .box-item {
     background: linear-gradient(to bottom, var(--very-dark-blue), var(--dark-blue));
-    /* background-color: red; */
     padding: 1.5rem 2rem;
     margin: 1rem 0;
     border-radius: 5px;
@@ -79,9 +78,14 @@
 }
 
 .social-icons {
-    position: absolute;
-    bottom: 0;
+    position: fixed;
+    bottom: 30px;
     z-index: 99999999;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
 }
 
 .socials {
@@ -95,4 +99,43 @@
 .socials:hover {
     fill: var(--soft-red);
     font-size: 4rem;
+}
+
+@media screen and (max-width: 800px) {
+    .social-icons {
+        position: fixed;
+        bottom: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hills-bg{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 200px;
+        width: 900px;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    .social-icons {
+        position: fixed;
+        bottom: 60px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hills-bg{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 250px;
+        width: 900px;
+        z-index: -1;
+    }
+
+    
 }

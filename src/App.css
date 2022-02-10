@@ -19,3 +19,7 @@
   font-weight: 700;
   color: var(--white)
 }
+
+body{
+  background: linear-gradient(90deg, var(--purple), var(--purple));
+}
